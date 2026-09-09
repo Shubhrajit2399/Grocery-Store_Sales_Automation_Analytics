@@ -1,0 +1,30 @@
+﻿function createWeeklySalesSheet() {
+ // 1. Paste your Google Drive Folder ID here
+ var folderId = '1IAtfzodRFVMcWSk6dujVfvwDYjuqLRJp';
+
+
+ // 2. Generate dynamic name based on the current week's date
+ var today = new Date();
+ var options = { month: 'short', day: 'numeric', year: 'numeric' };
+ var dateString = today.toLocaleDateString('en-US', options);
+ var sheetName = "Sales - Week of " + dateString;
+  // 3. Create the spreadsheet and set up headers immediately
+ var spreadsheet = SpreadsheetApp.create(sheetName);
+ var sheet = spreadsheet.getActiveSheet();
+ sheet.setName("Weekly Sales");
+  // Customize your grocery store columns below as needed
+ var headers = ["Date", "Item Name", "Category", "Quantity Sold", "Unit Price", "Total Amount", "Payment Method"];
+ sheet.appendRow(headers);
+  // Style the header row (Bold text and light gray background)
+ var headerRange = sheet.getRange(1, 1, 1, headers.length);
+ headerRange.setFontWeight("bold");
+ headerRange.setBackground("#f3f3f3");
+ sheet.setFrozenRows(1);
+  // Force all changes to save/flush before moving
+ SpreadsheetApp.flush();
+  // 4. Move the file into your specific Google Drive folder
+ var file = DriveApp.getFileById(spreadsheet.getId());
+ var folder = DriveApp.getFolderById(folderId);
+  folder.addFile(file);
+ DriveApp.getRootFolder().removeFile(file);
+}
