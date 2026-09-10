@@ -1,0 +1,67 @@
+﻿function processWeeklySalesSheet() {
+ // 1. Define your Google Drive Folder ID and Master Spreadsheet ID
+ var folderId = "1IAtfzodRFVMcWSk6dujVfvwDYjuqLRJp";
+ var masterSpreadsheetId = "10FbRqrwNryd6pvfMC0O-i5wv_NkPPV17XwfdU35zKBM";
+  var folder = DriveApp.getFolderById(folderId);
+ var masterSpreadsheet = SpreadsheetApp.openById(masterSpreadsheetId);
+ var masterSheet = masterSpreadsheet.getSheetByName("Sheet1");
+  var files = folder.getFiles();
+ var targetFile = null;
+  while (files.hasNext()) {
+   var file = files.next();
+   if (file.getName().indexOf("Sales - Week of") === 0) {
+     targetFile = file;
+     break;
+   }
+ }
+  if (!targetFile) {
+   Logger.log("No matching weekly file found for this run.");
+   return;
+ }
+  var sourceSpreadsheet = SpreadsheetApp.openById(targetFile.getId());
+ var sourceSheet = sourceSpreadsheet.getSheets()[0];
+  // CHANGED FROM getValues() to getDisplayValues()
+ // This grabs the exact text shown in the cell, preventing auto-flipping.
+ var data = sourceSheet.getDataRange().getDisplayValues();
+  for (var i = 1; i < data.length; i++) {
+   var row = data[i];
+  
+   // Normalize the Date (Index 0) into a strict YYYY-MM-DD text string
+   row[0] = convertToStandardDateString(row[0]);
+  
+   masterSheet.appendRow(row);
+ }
+  Logger.log("Successfully processed and appended data from: " + targetFile.getName());
+}
+
+
+// Helper function to safely convert any date format or text string to YYYY-MM-DD
+function convertToStandardDateString(rawDate) {
+  if (!rawDate) return "";
+  var dateStr = String(rawDate).trim();
+  // 1. Force check for DD/MM/YYYY or DD/MM/YY text format first
+ var dmyMatch = dateStr.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
+ if (dmyMatch) {
+   var day = dmyMatch[1].padStart(2, '0');    // First part is strictly Day
+   var month = dmyMatch[2].padStart(2, '0'); // Second part is strictly Month
+   var year = dmyMatch[3];
+   if (year.length === 2) {
+     year = "20" + year;
+   }
+   return year + "-" + month + "-" + day; // Outputs true YYYY-MM-DD
+   }
+  // 2. Handle YYYY-MM-DD text formats
+ var ymdMatch = dateStr.match(/^(\d{4})[\/\-](\d{1,2})[\/\-](\d{1,2})$/);
+ if (ymdMatch) {
+   var year = ymdMatch[1];
+   var month = ymdMatch[2].padStart(2, '0');
+   var day = ymdMatch[3].padStart(2, '0');
+   return year + "-" + month + "-" + day;
+ }
+  // 3. Fallback for any other text
+ var parsedDate = new Date(dateStr);
+ if (!isNaN(parsedDate.getTime())) {
+   return Utilities.formatDate(parsedDate, Session.getScriptTimeZone(), "yyyy-MM-dd");
+ }
+  return dateStr;
+}
