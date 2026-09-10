@@ -21,6 +21,7 @@ Trigger->
 
 <img width="1429" height="252" alt="Screenshot 2026-09-09 at 9 01 18 AM" src="https://github.com/user-attachments/assets/fab558c6-3019-4724-8ee4-017a403967c2" />
 
+
 Step-2:
 We have created one more Js code-snippet and set it's trigger on each week Tuesday in between 10-11 PM IST. This code will fetch the data from the Drive folder-path files on weekly basis and append data in a Master-File. This code will also format the Date of the source file into a readable form for Analytics Tool.
 
