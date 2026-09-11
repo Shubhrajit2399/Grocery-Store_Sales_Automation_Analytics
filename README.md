@@ -17,8 +17,6 @@ Code is in Code.gs and appscript.json files.
 
 Trigger->
 
-<img width="1425" height="751" alt="Screenshot 2026-09-09 at 8 56 53 AM" src="https://github.com/user-attachments/assets/32672c4c-520e-4268-b62d-86a1d4e69b2a" />
-
 <img width="1429" height="252" alt="Screenshot 2026-09-09 at 9 01 18 AM" src="https://github.com/user-attachments/assets/fab558c6-3019-4724-8ee4-017a403967c2" />
 
 
@@ -29,3 +27,8 @@ Code is in Code.gs_Master-File and appscript.json_Master-File files.
 
 Step-3:
 Now throughout the whole week store-keeper inserts sales data inside the file created in Step-1.
+
+Step-4:
+We have now designed a report in Google Looker-Studio to plot that data from Master-File.
+
+<img width="1425" height="768" alt="Screenshot 2026-09-11 at 7 45 25 PM" src="https://github.com/user-attachments/assets/3b65af22-f924-428c-8614-4b7b45d8bbb1" />
