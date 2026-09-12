@@ -32,3 +32,8 @@ Step-4:
 We have now designed a report in Google Looker-Studio to plot that data from Master-File.
 
 <img width="1425" height="768" alt="Screenshot 2026-09-11 at 7 45 25 PM" src="https://github.com/user-attachments/assets/3b65af22-f924-428c-8614-4b7b45d8bbb1" />
+
+
+In the Report Resource tab we have edited the Managed resources on a Data freshness trigger in each 15 minutes. This will update the report resources in 15 minutes when it gets notification of any update on Master-File. So, the Master-File will be updated via App-Script Js code on each Tuesday between 10-11 PM IST and as soon as it updates, after 15 mins the Looker-Studio Data resources will also refresh to get the new data added automatically in the Report.
+
+<img width="1428" height="488" alt="Screenshot 2026-09-12 at 10 17 49 AM" src="https://github.com/user-attachments/assets/0419c68c-e268-4289-b426-03fc45fca360" />
