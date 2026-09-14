@@ -37,3 +37,8 @@ We have now designed a report in Google Looker-Studio to plot that data from Mas
 In the Report Resource tab we have edited the Managed resources on a Data freshness trigger in each 15 minutes. This will update the report resources in 15 minutes when it gets notification of any update on Master-File. So, the Master-File will be updated via App-Script Js code on each Tuesday between 10-11 PM IST and as soon as it updates, after 15 mins the Looker-Studio Data resources will also refresh to get the new data added automatically in the Report.
 
 <img width="1428" height="488" alt="Screenshot 2026-09-12 at 10 17 49 AM" src="https://github.com/user-attachments/assets/0419c68c-e268-4289-b426-03fc45fca360" />
+
+Step-5:
+Next we have automated the Looker studio Report delivery option. On each Tuesday 11.30 PM IST the view format of updated report will be sent to the owner mail id automatically. Owner will be able to interact with the report, share and download from the shared link over mail.
+
+<img width="604" height="408" alt="Screenshot 2026-09-14 at 7 42 42 AM" src="https://github.com/user-attachments/assets/6e195398-f2d0-4ed4-9d68-9756a385b186" />
