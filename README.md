@@ -46,6 +46,7 @@ Next we have automated the Looker studio Report delivery option. On each Tuesday
 
 <img width="604" height="408" alt="Screenshot 2026-09-14 at 7 42 42 AM" src="https://github.com/user-attachments/assets/6e195398-f2d0-4ed4-9d68-9756a385b186" />
 
+
 ##Result:
 
 Now as per our desired workflow, the automation is generating a report of the weekly sales activities and send a view format of it via mail in the selected mail id's on every Tuesday in between 11.30- 11.45 PM IST.
