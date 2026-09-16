@@ -46,6 +46,7 @@ Next we have automated the Looker studio Report delivery option. On each Tuesday
 
 <img width="604" height="408" alt="Screenshot 2026-09-14 at 7 42 42 AM" src="https://github.com/user-attachments/assets/6e195398-f2d0-4ed4-9d68-9756a385b186" />
 
+Next we will test this whole automation workflow on scheduled time.
 
 ##Result:
 
