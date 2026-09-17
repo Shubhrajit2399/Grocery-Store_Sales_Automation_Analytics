@@ -53,3 +53,7 @@ Next we will test this whole automation workflow on scheduled time.
 Now as per our desired workflow, the automation is generating a report of the weekly sales activities and send a view format of it via mail in the selected mail id's on every Tuesday in between 11.30- 11.45 PM IST.
 
 <img width="1424" height="580" alt="Screenshot 2026-09-16 at 7 17 21 AM" src="https://github.com/user-attachments/assets/ed9d41e8-5cf4-4167-9b16-c4d7724c1ed0" />
+
+The report link is inside the mail and by clicking that it redirects to the interactive window from where customer can view and filter down the sales figures and get a clear knowledge of how profit and sales figures as well low and high performing sales-unit.
+
+<img width="1378" height="697" alt="Screenshot 2026-09-16 at 7 49 24 AM" src="https://github.com/user-attachments/assets/3aaa6415-1a10-46a7-86d7-0e2cf7d5aca3" />
