@@ -57,3 +57,5 @@ Now as per our desired workflow, the automation is generating a report of the we
 The report link is inside the mail and by clicking that it redirects to the interactive window from where customer can view and filter down the sales figures and get a clear knowledge of how profit and sales figures as well low and high performing sales-unit.
 
 <img width="1427" height="765" alt="Screenshot 2026-09-16 at 7 32 59 AM" src="https://github.com/user-attachments/assets/c337b87c-baac-4cca-994f-15377fcf2768" />
+
+The same report can be downloaded in pdf format same-time on-click (sample file attached).
