@@ -59,3 +59,5 @@ The report link is inside the mail and by clicking that it redirects to the inte
 <img width="1427" height="765" alt="Screenshot 2026-09-16 at 7 32 59 AM" src="https://github.com/user-attachments/assets/c337b87c-baac-4cca-994f-15377fcf2768" />
 
 The same report can be downloaded in pdf format same-time on-click (sample file attached).
+
+On the next Wednesday a new sheet also gets generated thru the automation and through out the week store-keeper inserts sales data inside it and after a week on next Tuesday the new entries appended in the Master Data Sheet and a consolidated report is sent via mail via automation.
