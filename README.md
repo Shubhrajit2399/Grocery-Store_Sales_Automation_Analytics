@@ -61,3 +61,5 @@ The report link is inside the mail and by clicking that it redirects to the inte
 The same report can be downloaded in pdf format same-time on-click (sample file attached).
 
 On the next Wednesday a new sheet also gets generated thru the automation and through out the week store-keeper inserts sales data inside it and after a week on next Tuesday the new entries appended in the Master Data Sheet and a consolidated report is sent via mail via automation.
+
+<!--End_of_File--!>
